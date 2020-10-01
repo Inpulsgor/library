@@ -6,7 +6,7 @@ function handleSubmitFormData(e) {
   e.preventDefault();
 
   const formData = new FormData(e.currentTarget);
-  const data = {};
+  const data = {}; //object with form values
 
   formData.forEach((name, value) => {
     data[name] = value;
