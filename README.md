@@ -7,3 +7,4 @@
  - [deleteItemById](https://github.com/Inpulsgor/library/tree/master/deleteItemById) (delete item from list by ID) `JavaScript`
  - [reactForm](https://github.com/Inpulsgor/library/tree/master/reactForm) (react form submit) `React`
  - [handleChange](https://github.com/Inpulsgor/library/tree/master/handleChange) (universal handleChange function (input & input checkbox) `React`
+ - [isEmpty](https://github.com/Inpulsgor/library/tree/master/isEmpty) (to check array - if it's empty) `React`
