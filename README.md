@@ -1,5 +1,6 @@
 # Library for (configs & tools)
 
+ - [font-weight](https://github.com/Inpulsgor/library/blob/master/font-weight/README.md) (font-weight list) `CSS`
  - [localStorage](https://github.com/Inpulsgor/library/tree/master/localStorage) (load & save to localStorage) `JavaScript`
  - [jsForm](https://github.com/Inpulsgor/library/tree/master/jsForm) (js form submit) `JavaScript`
  - [formData](https://github.com/Inpulsgor/library/tree/master/formData) (get object with form input values) `JavaScript`
