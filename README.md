@@ -15,5 +15,6 @@ Library for (configs & tools)
  - [reactForm](https://github.com/Inpulsgor/library/tree/master/reactForm) (react form submit) `React`
  - [handleChange](https://github.com/Inpulsgor/library/tree/master/handleChange) (universal handleChange function (input & input checkbox) `React`
  - [isEmpty](https://github.com/Inpulsgor/library/tree/master/isEmpty) (to check array - if it's empty) `React`
+ - [routes](https://github.com/Inpulsgor/library/tree/master/routes) (Private/Public routes)
 ## Server
  - [http status](https://github.com/Inpulsgor/library/tree/master/http-status) (http request status)
