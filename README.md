@@ -5,7 +5,7 @@ Library for (configs & tools)
 ## HTML/CSS
  - [font-weight](https://github.com/Inpulsgor/library/blob/master/font-weight/README.md) (font-weight list) `CSS`
 ## JavaScript
- - [axios] (https://github.com/Inpulsgor/library/tree/master/axios) (axios/async await/try catch) `JavaScript`
+ - [axios](https://github.com/Inpulsgor/library/tree/master/axios) (axios/async await/try catch) `JavaScript`
  - [localStorage](https://github.com/Inpulsgor/library/tree/master/localStorage) (load & save to localStorage) `JavaScript`
  - [jsForm](https://github.com/Inpulsgor/library/tree/master/jsForm) (js form submit) `JavaScript`
  - [formData](https://github.com/Inpulsgor/library/tree/master/formData) (get object with form input values) `JavaScript`
