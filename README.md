@@ -1,5 +1,5 @@
 ```shell
-Library for (configs & tools)
+(Configs & Tools) library
 ```
 
 ## HTML/CSS
