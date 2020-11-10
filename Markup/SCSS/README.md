@@ -1,3 +1,37 @@
+## main.scss
+
+```scss
+@import "./helpers/normalize";
+@import "./helpers/placeholders";
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./helpers/fonts";
+@import "./helpers/base";
+
+// MAIN PAGE
+@import "./components/;
+@import "./components/;
+@import "./components/;
+// SECOND PAGE
+@import "./components/;
+@import "./components/;
+@import "./components/;
+```
+
+## _fonts.scss
+
+```scss
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+    url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/roboto-v20-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+```
+
 ## _base.scss
 
 ```scss
