@@ -28,6 +28,15 @@
   }
 }
 
+// font
+@mixin font($ff: 'Raleway', $fw: 400, $fs: 16px, $lh: 1.2, $color: inherit) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  color: $color;
+}
+
 // font size (rem)
 @function rem($px) {
   @return ($px / 16) + rem;
