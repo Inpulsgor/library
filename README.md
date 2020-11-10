@@ -4,7 +4,7 @@
 
 ## HTML/CSS
  - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md) (font-weight list) `CSS`
- - [scss](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS) `SCSS`
+ - [scss](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS) (styles config) `SCSS`
 ## JavaScript
  - [CRUD](https://github.com/Inpulsgor/library/tree/master/JavaScript/CRUD) (axios/async await/try catch) `JavaScript`
  - [localStorage](https://github.com/Inpulsgor/library/tree/master/JavaScript/localStorage) (load & save to localStorage) `JavaScript`
