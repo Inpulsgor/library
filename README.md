@@ -23,6 +23,7 @@
  - [isEmpty](https://github.com/Inpulsgor/library/tree/master/React/isEmpty) (to check array - if it's empty) `React`
  - [routes](https://github.com/Inpulsgor/library/tree/master/React/routes) (Private/Public routes) `React`
  - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (JWT - Json Web Token) `React`
+ - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) `.prettierrc config file`
  
 ## Server
 
