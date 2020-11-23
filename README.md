@@ -17,7 +17,7 @@
  - [CRUD](https://github.com/Inpulsgor/library/tree/master/JavaScript/CRUD) (fetch + axios && create/read/update/delete) `JavaScript`
  
 ## React
-
+ - [propTypes & DefaultProps](https://github.com/Inpulsgor/library/tree/master/React/propTypes) (propTypes & DefaultProps) `React`
  - [reactForm](https://github.com/Inpulsgor/library/tree/master/React/reactForm) (react form submit) `React`
  - [handleChange](https://github.com/Inpulsgor/library/tree/master/React/handleChange) (universal handleChange function (input & input checkbox) `React`
  - [isEmpty](https://github.com/Inpulsgor/library/tree/master/React/isEmpty) (to check array - if it's empty) `React`
