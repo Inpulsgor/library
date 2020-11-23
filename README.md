@@ -22,7 +22,7 @@
  - [handleChange](https://github.com/Inpulsgor/library/tree/master/React/handleChange) (universal handleChange function (input & input checkbox) `React`
  - [isEmpty](https://github.com/Inpulsgor/library/tree/master/React/isEmpty) (to check array - if it's empty) `React`
  - [routes](https://github.com/Inpulsgor/library/tree/master/React/routes) (Private/Public routes) `React`
- - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (JWT - Json Web Token) `React`
+ - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (JWT(Json Web Token) - set(token) & unset()) `React`
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (.prettierrc config file) `React`
  
 ## Server
