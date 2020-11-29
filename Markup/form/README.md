@@ -1,3 +1,3 @@
-# font-weight list: 
+# form animated label: 
 
-![alt text](https://github.com/Inpulsgor/library/blob/master/Markup/form/form_image.png "Logo Title Text 1")
+![alt text](https://github.com/Inpulsgor/library/blob/master/Markup/form/form_image.png "Form example")
