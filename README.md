@@ -26,7 +26,7 @@
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (`.prettierrc` config file) 
  
 ## Vue
-
+ - [basics](https://github.com/Inpulsgor/library/tree/master/Vue/basics) (basics)
  
 ## Server
 
