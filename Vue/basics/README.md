@@ -1,10 +1,10 @@
-## Install
+## Install vue-cli
 ```js
 $ npm install -g vue-cli
 ```
 
 
-## Usage
+## App init
 ```js
 $ vue init webpack vue-app
 $ vue init webpack-simple vue-app
