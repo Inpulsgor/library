@@ -250,7 +250,8 @@ input[type='radio'].visually-hidden {
 
 ## brakepoints.scss
 
-```
+```scss
+
 @mixin for-size($size) {
   @if $size == phone-only {
     @media (max-width: 599px) { @content; }
