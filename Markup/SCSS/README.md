@@ -193,20 +193,50 @@ input[type='radio'].visually-hidden {
   }
 }
 
+@mixin for-phone-sm-only {
+  @media (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+
 @mixin for-tablet-md {
   @media (min-width: 768px) {
     @content;
   }
 }
 
-@mixin for-desktop-lg {
+@mixin for-tablet-md-only {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
   @media (min-width: 992px) {
     @content;
   }
 }
 
-@mixin for-desktop-xl {
+@mixin for-desktop-only {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-lg {
   @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-lg-only {
+  @media (min-width: 1200px) and (max-width: 1499px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-xl {
+  @media (min-width: 1500px) {
     @content;
   }
 }
