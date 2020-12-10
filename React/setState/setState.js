@@ -1,14 +1,32 @@
 import React, { Component } from "react";
 
-class Test extends Component {
+import TaskEditor from "./TaskEditor";
+import TaskList from "./TaskList";
+
+import createTask from "./services/createTask";
+
+
+class App extends Component {
   state = {
     tasks: [],
   };
 
-  addTask = (task) => {
+  // add task to array, using setState
+  addTask = () => {
+    const task = createTask();
+
     this.setState((prevState) => {
       return {
         tasks: [...prevState.tasks, task],
+      };
+    });
+  };
+
+  // remove task from task list by ID
+  removeTask = (id) => {
+    this.setState((prevState) => {
+      return {
+        tasks: prevState.tasks.filter((task) => task.id !== id),
       };
     });
   };
@@ -18,11 +36,13 @@ class Test extends Component {
 
     return (
       <>
-        <button onClick={this.addTask}>Add</button>
-        {tasks.length > 0 && <TaskList tasks={tasks} />}
+        <TaskEditor onAddTask={this.addTask} />
+        {tasks.length > 0 && (
+          <TaskList tasks={tasks} onRemoveTask={this.removeTask} />
+        )}
       </>
     );
   }
 }
 
-export default Test;
+export default App;
