@@ -15,13 +15,13 @@
  - [CRUD](https://github.com/Inpulsgor/library/tree/master/JavaScript/CRUD) (fetch + axios && create/read/update/delete) 
  
 ## React
- - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (`.prettierrc` config file) 
+ - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (config file) 
  - [setState & deleteByID](https://github.com/Inpulsgor/library/tree/master/React/setState) 
  - [propTypes & DefaultProps](https://github.com/Inpulsgor/library/tree/master/React/propTypes)
  - [reactForm](https://github.com/Inpulsgor/library/tree/master/React/reactForm) 
- - [handleChange](https://github.com/Inpulsgor/library/tree/master/React/handleChange) (universal handleChange function (input & input checkbox) 
- - [isEmpty](https://github.com/Inpulsgor/library/tree/master/React/isEmpty) (to check array - if it's empty) 
- - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (JWT(Json Web Token) - `set(token)` & `unset()`) 
+ - [handleChange](https://github.com/Inpulsgor/library/tree/master/React/handleChange) (universal function for input & checkbox) 
+ - [isEmpty](https://github.com/Inpulsgor/library/tree/master/React/isEmpty) (check array - if it's empty) 
+ - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (Json Web Token - `set(token)` & `unset()`) 
  - [routes](https://github.com/Inpulsgor/library/tree/master/React/routes) (Private/Public routes) 
  - [redux](https://github.com/Inpulsgor/library/tree/master/React/Redux) (`Redux`)
  
