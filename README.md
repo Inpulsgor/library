@@ -16,7 +16,7 @@
  
 ## React
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (`.prettierrc` config file) 
- - [setState](https://github.com/Inpulsgor/library/tree/master/React/setState) 
+ - [setState & deleteByID](https://github.com/Inpulsgor/library/tree/master/React/setState) 
  - [propTypes & DefaultProps](https://github.com/Inpulsgor/library/tree/master/React/propTypes)
  - [reactForm](https://github.com/Inpulsgor/library/tree/master/React/reactForm) 
  - [handleChange](https://github.com/Inpulsgor/library/tree/master/React/handleChange) (universal handleChange function (input & input checkbox) 
