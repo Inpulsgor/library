@@ -46,10 +46,10 @@ export default App;
 ## TaskEditor.jsx
 
 ```js
-const TaskEditor = ({ AddTask }) => {
+const TaskEditor = ({ onAddTask }) => {
   return (
     <div>
-      <button type="button" onClick={AddTask}>
+      <button type="button" onClick={onAddTask}>
         Add Task
       </button>
     </div>
