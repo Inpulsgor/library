@@ -1,4 +1,5 @@
 [example link (Sandobx)](https://codesandbox.io/s/mjzjk3ny9?file=/src/components/MessageFeed.js)
+[docs javascript](https://learn.javascript.ru/metrics)
 
 ```js
 
