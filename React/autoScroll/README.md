@@ -52,3 +52,5 @@ export default class MessageFeed extends Component {
 }
 
 ```
+
+![alt text](https://github.com/Inpulsgor/library/blob/master/React/autoScroll/metric.png "scroll example")
