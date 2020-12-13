@@ -1,3 +1,5 @@
+[example link (Sandobx)](https://codesandbox.io/s/mjzjk3ny9?file=/src/components/MessageFeed.js)
+
 ```js
 
 import React, { Component, createRef } from 'react';
