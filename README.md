@@ -19,6 +19,7 @@
  - [setState & deleteByID](https://github.com/Inpulsgor/library/tree/master/React/setState) 
  - [propTypes & DefaultProps](https://github.com/Inpulsgor/library/tree/master/React/propTypes)
  - [autoScroll](https://github.com/Inpulsgor/library/tree/master/React/autoScroll) (chat messages auto scroll)
+ - [localStorage](https://github.com/Inpulsgor/library/tree/master/React/localStorage) (render list of items from `localStorage`)
  - [reactForm](https://github.com/Inpulsgor/library/tree/master/React/reactForm) 
  - [handleChange](https://github.com/Inpulsgor/library/tree/master/React/handleChange) (universal function for input & checkbox) 
  - [isEmpty](https://github.com/Inpulsgor/library/tree/master/React/isEmpty) (check array - if it's empty) 
