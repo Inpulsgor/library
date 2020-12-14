@@ -26,6 +26,7 @@
  - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (Json Web Token - `set(token)` & `unset()`) 
  - [routes](https://github.com/Inpulsgor/library/tree/master/React/routes) (Private/Public routes) 
  - [redux](https://github.com/Inpulsgor/library/tree/master/React/Redux) (`Redux`)
+ - [helpers](https://github.com/Inpulsgor/library/tree/master/React/helpers) (`helpers.js`)
  
 ## Vue
  - [basics](https://github.com/Inpulsgor/library/tree/master/Vue/basics) (basics)
