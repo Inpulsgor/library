@@ -8,6 +8,12 @@ const mapper = (articles) => {
     ...props,
   }));
 };
+
+// usage example
+componentDidMount() {
+    axios.get(BASE_URL).then(response => this.setState({ articles: mapper(response.data.hits)})).catch(console.log);
+}
+
 ```
 
 ```js
