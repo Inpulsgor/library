@@ -1,5 +1,4 @@
 ```js
-  
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -35,10 +34,11 @@ export const PublicRoute = ({ component: Component, ...routeProps }) => {
     />
   );
 };
-
 ```
-```js
 
+## routes.js
+
+```js
 import { lazy } from "react";
 
 export default [
@@ -61,5 +61,4 @@ export default [
     restricted: false,
   },
 ];
-
 ```
