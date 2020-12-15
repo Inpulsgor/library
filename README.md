@@ -12,7 +12,9 @@
  - [activeLink](https://github.com/Inpulsgor/library/tree/master/JavaScript/activeLink) (add active class to target element and remove from previous) 
  - [deleteItemById](https://github.com/Inpulsgor/library/tree/master/JavaScript/deleteItemById) (delete item from list by ID) 
  - [localStorage](https://github.com/Inpulsgor/library/tree/master/JavaScript/localStorage) (load & save to localStorage) 
- - [CRUD](https://github.com/Inpulsgor/library/tree/master/JavaScript/CRUD) (fetch + axios && create/read/update/delete) 
+ - [CRUD](https://github.com/Inpulsgor/library/tree/master/JavaScript/CRUD) (fetch + axios && create/read/update/delete)
+###
+ - [Components](https://github.com/Inpulsgor/library/tree/master/JavaScript/Components)
  
 ## React
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (config file) 
