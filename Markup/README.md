@@ -1,3 +1,4 @@
+## :nth-child(2n)
 ```css
 /* 
 2 * 0 = 0;
@@ -17,6 +18,7 @@
 }
 ```
 
+## :nth-child(2n + 1)
 ```css
 /* 
 2 * 0 + 1 = 1;
@@ -26,7 +28,7 @@
 буде вибрано усі не парні елементи 
  */
 
-.list-item:nth-child(2n) {
+.list-item:nth-child(2n + 1) {
   color: white;
 }
 
