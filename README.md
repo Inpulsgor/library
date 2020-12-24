@@ -5,6 +5,8 @@
 ## HTML/CSS
  - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md) (font-weight list) 
  - [scss](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS) (styles config) 
+###
+ - [helpers](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
  
 ## JavaScript
  - [formSubmit](https://github.com/Inpulsgor/library/tree/master/JavaScript/jsForm) (form submit) 
