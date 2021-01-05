@@ -52,3 +52,17 @@
   color: white;
 }
 ```
+styles.css
+```css
+
+
+.toggle.active {
+  клас toggle з класом active ( наприклад: <button class="toggle active"></button> )
+}
+
+.toggle .active {
+  елемент з класом active - вложений в елемент з класом toggle
+}
+
+
+```
