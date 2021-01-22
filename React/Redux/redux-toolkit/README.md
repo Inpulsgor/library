@@ -22,9 +22,9 @@ ReactDOM.render(
 ```js
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
 
-import storage from 'redux-persist/lib/storage';
 import loaderSlice from './loader/loaderSlice';
 import authSlice from './auth/authSlice';
 
