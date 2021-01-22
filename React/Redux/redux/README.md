@@ -76,7 +76,7 @@ export const addUser = () => ({
 });
 
 export const deleteUser = (id) => ({
-  type: ActionTypes.ADD_USER,
+  type: ActionTypes.DELETE_USER,
   payload: {
     id,
   }
