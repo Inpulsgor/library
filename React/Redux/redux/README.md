@@ -56,6 +56,7 @@ export default rootReducer;
 ```js
 export const ActionTypes = {
   ADD_USER: "user/ADD_USER",
+  DELETE_USER: "user/DELETE_USER",
 };
 
 // async action types
@@ -76,6 +77,13 @@ export const addUser = () => ({
     user,
   }
 });
+
+export const deleteUser = (id) => ({
+  type: ActionTypes.ADD_USER,
+  payload: {
+    id,
+  }
+});
 ```
 
 ## userReducer.js
@@ -87,6 +95,9 @@ const userReducer = (state = [], action) => {
   switch (action.type) {
     case ActionTypes.ADD_USER:
       return [...state, action.payload.user];
+    
+    case ActionTypes.DELETE_USER:
+      return state.filter(user => user.id !== action.payload.id);    
 
     default:
       return state;
@@ -118,7 +129,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => {
   onAddUser: () => dispatch(addUser()),
-  onDeleteUser: () => dispatch(deleteUser()),
+  onDeleteUser: (id) => dispatch(deleteUser(id)),
   ...
 }
 
