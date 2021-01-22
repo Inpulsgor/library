@@ -122,11 +122,11 @@ const mapStateToProps = (state) => ({
   ...
 })
 
-const mapDispatchToProps = {
-  onAddUser,
-  onDeleteUser,
+const mapDispatchToProps = dispatch => ({
+  onAddUser: () => dispatch(addUser()),
+  onDeleteUser: (id) => dispatch(deleteUser(id)),
   ...
-}
+})
 
 connect(mapStateToProps, mapDispatchToProps)(Component)
 ```
