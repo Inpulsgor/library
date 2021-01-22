@@ -17,25 +17,31 @@ ReactDOM.render(
 
 ## store.js
 ```js
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
 import rootReducer from "./rootReducer";
 
-const middleware = [thunk]; // [thunk... , rest middlewares goes here]
+// MIDDLEWARE
+const middleware = [thunk]; // [thunk, ...] <- all middlewares goes here
 const enhancer = applyMiddleware(...middleware);
 
+// STORE
 export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 ```
 
 ## rootReducer.js
 ```js
+import { combineReducers } from "redux";
+
+// REDUCERS
 import userReducer from "./user/userReducer";
 import someReducer from "./some/someReducer"; 
 import someReducer from "./some/someReducer"; 
 import someReducer from "./some/someReducer"; 
 
+// ROOT REDUCER
 const rootReducer = combineReducers({
   user: userReducer,
   some: someReducer, 
