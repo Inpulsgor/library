@@ -1,4 +1,4 @@
-## index 
+## index.js
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
@@ -15,7 +15,7 @@ ReactDOM.render(
 );
 ```
 
-## store
+## store.js
 ```js
 
 ```
@@ -24,6 +24,28 @@ ReactDOM.render(
 ```js
 
 ```
+
+## reduxmap
+```js
+//reduxmap --shortcut
+
+const mapStateToProps = (state) => ({
+  ...
+})
+
+const mapDispatchToProps = {
+  ...
+}
+
+connect(mapStateToProps, mapDispatchToProps)(Component)
+```
+
+
+## store
+```js
+
+```
+
 
 ## store
 ```js
