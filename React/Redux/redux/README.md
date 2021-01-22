@@ -36,7 +36,7 @@ export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 import { combineReducers } from "redux";
 
 // REDUCERS
-import userReducer from "./user/userReducer"; // current example
+import usersReducer from "./user/usersReducer"; // current example
 import someReducer from "./some/someReducer"; 
 import someReducer from "./some/someReducer"; 
 import someReducer from "./some/someReducer"; 
@@ -108,7 +108,7 @@ export default combineReducers({
 ```
 
 
-## userOrerations.js
+## usersOrerations.js
 ```js
 
 ```
