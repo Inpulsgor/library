@@ -52,22 +52,50 @@ const rootReducer = combineReducers({
 export default rootReducer;
 ```
 
-## actionType.js
+## actionTypes.js
 ```js
-export const ActionType = {
-  CREATE_USER_REQUEST: "CREATE_USER_REQUEST",
-  CREATE_USER_SUCCESS: "CREATE_USER_SUCCESS",
-  CREATE_USER_ERROR: "CREATE_USER_ERROR",
+export const ActionTypes = {
+  ADD_USER: "user/ADD_USER",
+};
+
+// async action types
+export const ActionTypes = {
+  ADD_USER_REQUEST: "user/ADD_USER_REQUEST",
+  ADD_USER_SUCCESS: "user/ADD_USER_SUCCESS",
+  ADD_USER_ERROR: "user/ADD_USER_ERROR",
 };
 ```
 
 ## userActions.js
 ```js
+import { ActionTypes } from "./actionTypes";
 
+export const addUser = () => ({
+  type: ActionTypes.ADD_USER,
+  payload: {
+    user,
+  }
+});
 ```
 
 ## userReducer.js
 ```js
+import { combineReducers } from "redux";
+import { ActionTypes } from "./actionTypes";
+
+const userReducer = (state = [], action) => {
+  switch (action.type) {
+    case ActionTypes.ADD_USER:
+      return [...state, action.payload.user];
+
+    default:
+      return state;
+  }
+};
+
+export default combineReducers({
+  user: userReducer,
+});
 
 ```
 
