@@ -48,6 +48,8 @@ const rootReducer = combineReducers({
   some: someReducer,
   some: someReducer, 
 });
+
+export default rootReducer;
 ```
 
 ## actionType.js
