@@ -135,6 +135,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 //  Similar Hook
+const dispatch = useDispatch(addUser())
 const dispatch = useDispatch(deleteUser(id))
 //---------------------------------------------
 
