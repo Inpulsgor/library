@@ -115,18 +115,28 @@ export default combineReducers({
 
 ## reduxmap --shortcut
 ```js
+import { useSelector, useDispatch } from "react-redux";
 import { addUser, deleteUser } from "./usersActions";
+
 
 const mapStateToProps = (state) => ({
   users: state.users.data
   ...
 })
 
+//  Similar Hook
+const users = useSelector(state => state.users.data)
+//---------------------------------------------
+
 const mapDispatchToProps = dispatch => ({
   onAddUser: () => dispatch(addUser()),
   onDeleteUser: (id) => dispatch(deleteUser(id)),
   ...
 })
+
+//  Similar Hook
+const dispatch = useDispatch(deleteUser(id))
+//---------------------------------------------
 
 connect(mapStateToProps, mapDispatchToProps)(Component)
 ```
