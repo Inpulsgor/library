@@ -36,14 +36,14 @@ export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 import { combineReducers } from "redux";
 
 // REDUCERS
-import userReducer from "./user/userReducer";
+import userReducer from "./user/userReducer"; // current example
 import someReducer from "./some/someReducer"; 
 import someReducer from "./some/someReducer"; 
 import someReducer from "./some/someReducer"; 
 
 // ROOT REDUCER
 const rootReducer = combineReducers({
-  user: userReducer,
+  users: usersReducer, // current example
   some: someReducer, 
   some: someReducer,
   some: someReducer, 
@@ -52,43 +52,43 @@ const rootReducer = combineReducers({
 export default rootReducer;
 ```
 
-## actionTypes.js
+## usersTypes.js
 ```js
 export const ActionTypes = {
-  ADD_USER: "user/ADD_USER",
-  DELETE_USER: "user/DELETE_USER",
+  ADD_USER: "users/ADD_USER",
+  DELETE_USER: "users/DELETE_USER",
   // async actions
-  ADD_USER_REQUEST: "user/ADD_USER_REQUEST",
-  ADD_USER_SUCCESS: "user/ADD_USER_SUCCESS",
-  ADD_USER_ERROR: "user/ADD_USER_ERROR",
+  ADD_USER_REQUEST: "users/ADD_USER_REQUEST",
+  ADD_USER_SUCCESS: "users/ADD_USER_SUCCESS",
+  ADD_USER_ERROR: "users/ADD_USER_ERROR",
 };
 ```
 
-## userActions.js
+## usersActions.js
 ```js
-import { ActionTypes } from "./actionTypes";
+import { usersTypes } from "./usersTypes";
 
 export const addUser = () => ({
-  type: ActionTypes.ADD_USER,
+  type: usersTypes.ADD_USER,
   payload: {
     user,
   }
 });
 
 export const deleteUser = (id) => ({
-  type: ActionTypes.DELETE_USER,
+  type: usersTypes.DELETE_USER,
   payload: {
     id,
   }
 });
 ```
 
-## userReducer.js
+## usersReducer.js
 ```js
 import { combineReducers } from "redux";
-import { ActionTypes } from "./actionTypes";
+import { usersTypes } from "./usersTypes";
 
-const userReducer = (state = [], action) => {
+const usersReducer = (state = [], action) => {
   switch (action.type) {
     case ActionTypes.ADD_USER:
       return [...state, action.payload.user];
@@ -102,7 +102,7 @@ const userReducer = (state = [], action) => {
 };
 
 export default combineReducers({
-  user: userReducer,
+  data: usersReducer,
 });
 
 ```
@@ -115,12 +115,10 @@ export default combineReducers({
 
 ## reduxmap --shortcut
 ```js
-import { addUser, deleteUser } from "./userActions";
+import { addUser, deleteUser } from "./usersActions";
 
 const mapStateToProps = (state) => ({
-  login: state.user.name //example
-  email: state.user.email //example
-  password: state.user.password //example
+  users: state.users.data
   ...
 })
 
