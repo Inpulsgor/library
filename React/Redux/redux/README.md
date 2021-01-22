@@ -105,9 +105,9 @@ export default combineReducers({
 
 ```
 
-## reduxmap
+## reduxmap --shortcut
 ```js
-//reduxmap --shortcut
+import { addUser, deleteUser } from "./userActions";
 
 const mapStateToProps = (state) => ({
   login: state.user.name //example
@@ -116,9 +116,9 @@ const mapStateToProps = (state) => ({
   ...
 })
 
-const mapDispatchToProps = {
-  addUser,
-  deleteUser,
+const mapDispatchToProps = dispatch => {
+  onAddUser: () => dispatch(addUser()),
+  onDeleteUser: () => dispatch(deleteUser()),
   ...
 }
 
