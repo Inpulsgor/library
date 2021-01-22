@@ -23,27 +23,24 @@ import thunk from "redux-thunk";
 
 import rootReducer from "./rootReducer";
 
-// MIDDLEWARE
 const middleware = [thunk]; // [thunk... , rest middlewares goes here]
 const enhancer = applyMiddleware(...middleware);
 
-// STORE
 export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 ```
 
 ## rootReducer.js
 ```js
 import userReducer from "./user/userReducer";
-import someReducer from "./some/someReducer"; //example
-import someReducer from "./some/someReducer"; //example
-import someReducer from "./some/someReducer"; //example
+import someReducer from "./some/someReducer"; 
+import someReducer from "./some/someReducer"; 
+import someReducer from "./some/someReducer"; 
 
-//ROOT REDUCER
 const rootReducer = combineReducers({
   user: userReducer,
-  some: someReducer, //example
-  some: someReducer, //example
-  some: someReducer, //example
+  some: someReducer, 
+  some: someReducer,
+  some: someReducer, 
 });
 ```
 
