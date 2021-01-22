@@ -57,10 +57,7 @@ export default rootReducer;
 export const ActionTypes = {
   ADD_USER: "user/ADD_USER",
   DELETE_USER: "user/DELETE_USER",
-};
-
-// async action types
-export const ActionTypes = {
+  // async actions
   ADD_USER_REQUEST: "user/ADD_USER_REQUEST",
   ADD_USER_SUCCESS: "user/ADD_USER_SUCCESS",
   ADD_USER_ERROR: "user/ADD_USER_ERROR",
