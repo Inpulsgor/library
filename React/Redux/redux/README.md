@@ -21,45 +21,53 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
-// REDUCERS
-import userReducer from "./user/userReducer";
-import someReducer from "./some/someReducer"; //example
-import someReducer from "./some/someReducer"; //example
-import someReducer from "./some/someReducer"; //example
+import rootReducer from "./rootReducer";
 
 // MIDDLEWARE
 const middleware = [thunk]; // [thunk... , rest middlewares goes here]
 const enhancer = applyMiddleware(...middleware);
 
-// ROOT REDUCER
-const rootReducer = combineReducers({
-  users: userReducer,
-  some: someReducer, //example
-  some: someReducer, //example
-  some: someReducer, //example
-});
-
 // STORE
 export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 ```
 
+## rootReducer.js
+```js
+import userReducer from "./user/userReducer";
+import someReducer from "./some/someReducer"; //example
+import someReducer from "./some/someReducer"; //example
+import someReducer from "./some/someReducer"; //example
+
+//ROOT REDUCER
+const rootReducer = combineReducers({
+  user: userReducer,
+  some: someReducer, //example
+  some: someReducer, //example
+  some: someReducer, //example
+});
+```
+
 ## actionType.js
 ```js
-
+export const ActionType = {
+  CREATE_USER_REQUEST: "CREATE_USER_REQUEST",
+  CREATE_USER_SUCCESS: "CREATE_USER_SUCCESS",
+  CREATE_USER_ERROR: "CREATE_USER_ERROR",
+};
 ```
 
-## usersActions.js
+## userActions.js
 ```js
 
 ```
 
-## usersReducer.js
+## userReducer.js
 ```js
 
 ```
 
 
-## usersOrerations.js
+## userOrerations.js
 ```js
 
 ```
@@ -69,15 +77,16 @@ export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 //reduxmap --shortcut
 
 const mapStateToProps = (state) => ({
-  // for example:
-  login: state.user.name 
-  email: state.user.email 
-  password: state.user.password 
+  login: state.user.name //example
+  email: state.user.email //example
+  password: state.user.password //example
+  ...
 })
 
 const mapDispatchToProps = {
-  // all reducers goes here:
-  createUser
+  addUser,
+  deleteUser,
+  ...
 }
 
 connect(mapStateToProps, mapDispatchToProps)(Component)
