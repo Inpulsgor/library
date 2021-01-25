@@ -11,6 +11,7 @@ REACT_APP_FIREBASE_APP_ID=1:962539324806500:web:202346c46bf732423471f234186c685d
 ## firebaseConfig.js
 ```js
 import firebase from "firebase";
+import "firebase/auth";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -25,6 +26,6 @@ var firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 
+export const auth = app.auth();
 export default app;
-
 ```
