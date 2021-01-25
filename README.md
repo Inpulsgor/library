@@ -31,6 +31,7 @@
  - [routes](https://github.com/Inpulsgor/library/tree/master/React/routes) (Private/Public routes) 
  - [redux](https://github.com/Inpulsgor/library/tree/master/React/Redux) (`Redux`)
  - [helpers](https://github.com/Inpulsgor/library/tree/master/React/helpers) (`helpers.js`)
+ - [.env](https://github.com/Inpulsgor/library/tree/master/React/env) (`.env`)
  ###
  - [Components]()
  
