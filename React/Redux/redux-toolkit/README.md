@@ -88,7 +88,7 @@ const authPersistConfig = {
 
 // ROOT REDUCER
 const rootReducer = combineReducers({
-  auth: persistReducer(authReducer, authPersistConfig) // persist will use only token from auth
+  auth: persistReducer(authPersistConfig, authReducer), // persist will use only token from auth
   lists: listsReducers,
   colors: ColorsReducers,
 });
