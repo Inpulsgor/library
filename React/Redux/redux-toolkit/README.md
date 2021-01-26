@@ -1,90 +1,146 @@
 ## index.js 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 import { PersistGate } from 'redux-persist/integration/react';
 
-import App from './components/App';
-import { store, persistor } from './redux/store';
+import App from "./components/App/App";
+import { store, persistor } from "./redux/store";
 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
+    <Router>
       <App />
+    </Router>
     </PersistGate>
   </Provider>,
-  document.getElementById('root'),
+  document.getElementById("root")
+);
 );
 ```
 
 ## store.js
 ```js
-import { configureStore } from '@reduxjs/toolkit';
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import thunk from 'redux-thunk';
+import thunk from "redux-thunk";
+import { logger } from "redux-logger";
 
-import loaderSlice from './loader/loaderSlice';
-import authSlice from './auth/authSlice';
+import rootReducer from "./rootReducer";
 
+// all auth data will be set to localStorage
 const authPersistConfig = {
   key: 'auth',
   storage,
 };
 
-export const store = configureStore({
-  reducer: {
-    isLoading: loaderSlice.reducer,
-    auth: persistReducer(authPersistConfig, authSlice.reducer),
-  },
-  middleware: [thunk],
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+// MIDDLEWARE
+const middleware = [thunk, logger]; // [thunk, ...] <- middleware goes here
+const enhancer = applyMiddleware(...middleware);
+
+// STORE
+export const store = createStore(persistedReducer, composeWithDevTools(enhancer));
+export const persistor = persistStore(store);
+```
+
+## rootReducer.js
+```js
+import { combineReducers } from "redux";
+import storage from 'redux-persist/lib/storage';
+
+// REDUCERS
+import authReducer from "./auth/authReducer";
+import listsReducers from "./lists/listsReducers";
+import ColorsReducers from "./colors/ColorsReducers";
+
+// ROOT REDUCER
+const rootReducer = combineReducers({
+  auth: authReducer,
+  lists: listsReducers,
+  colors: ColorsReducers,
 });
 
-export const persistor = persistStore(store);
+export default rootReducer;
+```
+
+## rootReducer.js *in this case - only token will be set to localStorage
+```js
+import { combineReducers } from "redux";
+import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
+
+// REDUCERS
+import authReducer from "./auth/authReducer";
+import listsReducers from "./lists/listsReducers";
+import ColorsReducers from "./colors/ColorsReducers";
+
+// only token will be set to localStorage
+const authPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token']
+};
+
+// ROOT REDUCER
+const rootReducer = combineReducers({
+  auth: persistReducer(authReducer, authPersistConfig) // persist will use only token from auth
+  lists: listsReducers,
+  colors: ColorsReducers,
+});
+
+export default rootReducer;
 ```
 
 ## App.js
 ```js
-import React, { Suspense } from 'react';
-import { BrowserRouter, Switch, Redirect, Route, Link, NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { CommonLoading } from 'react-loadingg';
+import React, { Suspense, useEffect } from "react";
+import { Switch, Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { CommonLoading } from "react-loadingg";
 
-import routes from '../routes';
-import PrivateRoute from '../services/PrivateRoute';
-import PublicRoute from '../services/PublicRoute';
-
+// local imports
+import routes from "../../pages/routes";
+import { PrivateRoute, PublicRoute } from "../../services/helpers/helpers";
+// operations
+import * as listsOperations from "../../redux/lists/listsOperations";
+import * as colorsOperations from "../../redux/colors/colorsOperations";
+// styles
+import "../../scss/main.scss";
 
 const App = () => {
-  const isLoading = useSelector(state => state.isLoading.isLoading);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(listsOperations.fetchLists());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(colorsOperations.fetchColors());
+  }, [dispatch]);
 
   return (
-    <>
-      <BrowserRouter>
-        <Suspense fallback={<CommonLoading color="orange" size="large" />}>
-          {isLoading && (
-            <div>
-              <CommonLoading color="orange" size="large" />
-            </div>
-          )}
-          <Switch>
-            {routes.map(route => {
-              return route.private ? (
-                <PrivateRoute key={route.label} {...route} />
-              ) : (
-                <PublicRoute
-                  key={route.label}
-                  {...route}
-                  restricted={route.restricted}
-                />
-              );
-            })}
-            <Redirect to="/" />
-          </Switch>
-        </Suspense>
-      </BrowserRouter>
-    </>
+    <Suspense fallback={<CommonLoading color="orange" size="large" />}>
+      <Switch>
+        {routes.map((route) => {
+          return route.private ? (
+            <PrivateRoute key={route.label} {...route} />
+          ) : (
+            <PublicRoute
+              key={route.label}
+              {...route}
+              restricted={route.restricted}
+            />
+          );
+        })}
+        <Redirect to="/auth" />
+      </Switch>
+    </Suspense>
   );
 };
 
