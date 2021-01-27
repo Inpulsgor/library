@@ -67,3 +67,14 @@
 ```css
 mix-blend-mode: overlay;
 ```
+
+## writing-mode 
+```css
+// Устанавливает горизонтальное или вертикальное положение
+
+writing-mode: 
+ horizontal-tb 
+ horizontal-bt 
+ vertical-rl 
+ vertical-lr
+```
