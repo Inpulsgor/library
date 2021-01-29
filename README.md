@@ -5,6 +5,7 @@
 ## HTML/CSS
  - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md) (font-weight list) 
  - [scss](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS) (styles config) 
+ - [console.log](https://github.com/Inpulsgor/library/tree/master/Markup/console) (console.log(`colorized text`))
 ###
  - [helpers](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
  
