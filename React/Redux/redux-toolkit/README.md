@@ -108,3 +108,56 @@ const App = () => {
 
 export default App;
 ```
+
+## Actions.js
+```js
+import { createAction } from "@reduxjs/toolkit";
+import authTypes from "./authTypes";
+
+/*
+ * SIGN IN
+ */
+
+export const signInRequest = createAction(authTypes.SIGN_IN_REQUEST);
+
+export const signInSuccess = createAction(
+  authTypes.SIGN_IN_SUCCESS,
+  (response) => ({
+    payload: {
+      response,
+    },
+  })
+);
+
+export const signInError = createAction(authTypes.SIGN_IN_ERROR);
+
+/*
+ * SIGN UP
+ */
+
+export const signUpRequest = createAction(authTypes.SIGN_UP_REQUEST);
+
+export const signUpSuccess = createAction(
+  authTypes.SIGN_UP_SUCCESS,
+  (response) => ({
+    payload: {
+      response,
+    },
+  })
+);
+
+export const signUpError = createAction(authTypes.SIGN_UP_ERROR);
+
+/*
+ * SIGN OUT
+ */
+
+export const signOutSuccess = createAction(authTypes.SIGN_OUT_SUCCESS);
+export const signOutError = createAction(authTypes.SIGN_OUT_ERROR);
+
+/*
+ * CLEAR ERROR
+ */
+
+export const clearError = createAction(authTypes.CLEAR_ERROR);
+```
