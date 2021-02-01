@@ -23,49 +23,50 @@ ReactDOM.render(
 
 ## store.js
 ```js
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { persistStore, persistReducer } from 'redux-persist';
-import thunk from "redux-thunk";
+import { configureStore } from "@reduxjs/toolkit";
+import { persistStore } from "redux-persist";
 import { logger } from "redux-logger";
+import thunk from "redux-thunk";
 
 import rootReducer from "./rootReducer";
 
-// all auth data will be set to localStorage
-const authPersistConfig = {
-  key: 'auth',
-  storage,
-};
+export const store = configureStore({
+  reducer: rootReducer,
+  middleware: [thunk, logger],
+});
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-// MIDDLEWARE
-const middleware = [thunk, logger]; // [thunk, ...] <- middleware goes here
-const enhancer = applyMiddleware(...middleware);
-
-// STORE
-export const store = createStore(persistedReducer, composeWithDevTools(enhancer));
 export const persistor = persistStore(store);
+
 ```
 
 ## rootReducer.js
 ```js
 import { combineReducers } from "redux";
-import storage from 'redux-persist/lib/storage';
+import storage from "redux-persist/lib/storage";
+import { persistReducer } from "redux-persist";
 
 // REDUCERS
 import authReducer from "./auth/authReducer";
-import listsReducers from "./lists/listsReducers";
-import ColorsReducers from "./colors/ColorsReducers";
+import loaderReducer from "./loader/loaderReducer";
+import categoriesReducer from "./categories/categoriesReducer";
+import colorsReducer from "./colors/colorsReducer";
+
+const authPersistConfig = {
+  key: "auth",
+  storage,
+  whitelist: ["token", "user", "isAuthenticated"],
+};
 
 // ROOT REDUCER
 const rootReducer = combineReducers({
-  auth: authReducer,
-  lists: listsReducers,
-  colors: ColorsReducers,
+  auth: persistReducer(authPersistConfig, authReducer),
+  isLoading: loaderReducer,
+  categories: categoriesReducer,
+  colors: colorsReducer,
 });
 
 export default rootReducer;
+
 ```
 
 ## rootReducer.js *in this case - only token will be set to localStorage
