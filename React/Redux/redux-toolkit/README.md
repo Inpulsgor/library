@@ -65,25 +65,10 @@ export default App;
 ```js
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore } from "redux-persist";
-import { logger } from "redux-logger";
-import thunk from "redux-thunk";
-
-import rootReducer from "./rootReducer";
-
-export const store = configureStore({
-  reducer: rootReducer,
-  middleware: [thunk, logger],
-});
-
-export const persistor = persistStore(store);
-
-```
-
-## rootReducer.js
-```js
-import { combineReducers } from "redux";
-import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+// import { logger } from "redux-logger";
+import thunk from "redux-thunk";
 
 // REDUCERS
 import authReducer from "./auth/authReducer";
@@ -91,6 +76,7 @@ import loaderReducer from "./loader/loaderReducer";
 import categoriesReducer from "./categories/categoriesReducer";
 import colorsReducer from "./colors/colorsReducer";
 
+// PERSIST CONFIG
 const authPersistConfig = {
   key: "auth",
   storage,
@@ -98,15 +84,17 @@ const authPersistConfig = {
   // whitelist: ['token'] // in this case only token will be set to localStorage
 };
 
-// ROOT REDUCER
-const rootReducer = combineReducers({
-  auth: persistReducer(authPersistConfig, authReducer),
-  isLoading: loaderReducer,
-  categories: categoriesReducer,
-  colors: colorsReducer,
+export const store = configureStore({
+  reducer: {
+    auth: persistReducer(authPersistConfig, authReducer),
+    isLoading: loaderReducer,
+    categories: categoriesReducer,
+    colors: colorsReducer,
+  },
+  middleware: [thunk],
 });
 
-export default rootReducer;
+export const persistor = persistStore(store);
 ```
 
 ## Actions.js
