@@ -63,12 +63,12 @@ export default App;
 
 ## store.js
 ```js
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { persistStore } from "redux-persist";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-// import { logger } from "redux-logger";
 import thunk from "redux-thunk";
+import { logger } from "redux-logger";
 
 // REDUCERS
 import authReducer from "./auth/authReducer";
@@ -84,6 +84,8 @@ const authPersistConfig = {
   // whitelist: ['token'] // in this case only token will be set to localStorage
 };
 
+const defaultMiddleware = getDefaultMiddleware();
+
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
@@ -91,7 +93,7 @@ export const store = configureStore({
     categories: categoriesReducer,
     colors: colorsReducer,
   },
-  middleware: [thunk],
+  middleware: [...defaultMiddleware, thunk, logger],
 });
 
 export const persistor = persistStore(store);
