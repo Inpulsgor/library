@@ -56,6 +56,7 @@ const authPersistConfig = {
   key: "auth",
   storage,
   whitelist: ["token", "user", "isAuthenticated"],
+  // whitelist: ['token'] // in this case only token will be set to localStorage
 };
 
 // ROOT REDUCER
@@ -64,35 +65,6 @@ const rootReducer = combineReducers({
   isLoading: loaderReducer,
   categories: categoriesReducer,
   colors: colorsReducer,
-});
-
-export default rootReducer;
-
-```
-
-## rootReducer.js *in this case - only token will be set to localStorage
-```js
-import { combineReducers } from "redux";
-import storage from 'redux-persist/lib/storage';
-import { persistReducer } from 'redux-persist';
-
-// REDUCERS
-import authReducer from "./auth/authReducer";
-import listsReducers from "./lists/listsReducers";
-import ColorsReducers from "./colors/ColorsReducers";
-
-// only token will be set to localStorage
-const authPersistConfig = {
-  key: 'auth',
-  storage,
-  whitelist: ['token']
-};
-
-// ROOT REDUCER
-const rootReducer = combineReducers({
-  auth: persistReducer(authPersistConfig, authReducer), // persist will use only token from auth
-  lists: listsReducers,
-  colors: ColorsReducers,
 });
 
 export default rootReducer;
