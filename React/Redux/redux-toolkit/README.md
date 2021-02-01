@@ -161,3 +161,73 @@ export const signOutError = createAction(authTypes.SIGN_OUT_ERROR);
 
 export const clearError = createAction(authTypes.CLEAR_ERROR);
 ```
+
+## Reducer.js
+```js
+import { combineReducers } from "redux";
+import * as authActions from "./authActions";
+
+const user = (state = null, { type, payload }) => {
+  switch (type) {
+    case authActions.signInSuccess.type:
+    case authActions.signUpSuccess.type:
+      return payload.response.user;
+
+    case authActions.signOutSuccess.type:
+      return null;
+
+    default:
+      return state;
+  }
+};
+
+const isAuthenticated = (state = false, { type }) => {
+  switch (type) {
+    case authActions.signUpSuccess.type:
+    case authActions.signInSuccess.type:
+      return true;
+
+    case authActions.signOutSuccess.type:
+      return false;
+
+    default:
+      return state;
+  }
+};
+
+const token = (state = null, { type, payload }) => {
+  switch (type) {
+    case authActions.signInSuccess.type:
+    case authActions.signUpSuccess.type:
+      return payload.response.user.refreshToken;
+
+    case authActions.signOutSuccess.type:
+      return null;
+
+    default:
+      return state;
+  }
+};
+
+const error = (state = null, { type, payload }) => {
+  switch (type) {
+    case authActions.clearError.type:
+      return null;
+
+    case authActions.signInError:
+    case authActions.signUpError:
+    case authActions.signOutError:
+      return payload.error;
+
+    default:
+      return state;
+  }
+};
+
+export default combineReducers({
+  isAuthenticated,
+  user,
+  token,
+  error,
+});
+```
