@@ -2,7 +2,7 @@
 
 ```js
 /*
-* REDUX STORE_________________________________________________
+* ____________REDUX STORE_________________________________________________
 */
 
 import { createStore, applyMiddleware } from "redux";
@@ -31,7 +31,7 @@ const enhancer = applyMiddleware(...middleware);
 export const store = createStore(rootReducer, composeWithDevTools(enhancer));
 
 /*
-* @TOOLKIT STORE_________________________________________________
+* ____________TOOLKIT STORE_________________________________________________
 */
 
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
