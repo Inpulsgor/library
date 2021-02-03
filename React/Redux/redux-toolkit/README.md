@@ -3,62 +3,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 
 import { store, persistor } from "redux/store";
 import App from "components/App/App";
-import "scss/main.scss";
 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <Router>
         <App />
-      </Router>
     </PersistGate>
   </Provider>,
   document.getElementById("root")
 );
-```
-
-## App.js
-```js
-import React, { Suspense } from "react";
-import { Switch, Redirect, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { CommonLoading } from "react-loadingg";
-
-import routes from "pages/routes";
-import { PrivateRoute, PublicRoute } from "services/helpers";
-import { Loader } from "components";
-
-const App = () => {
-  const isLoading = useSelector((state) => state.isLoading);
-  const location = useLocation();
-
-  return (
-    <Suspense fallback={<CommonLoading color="orange" size="large" />}>
-      {isLoading && <Loader />}
-      <Switch location={location}>
-        {routes.map((route) => {
-          return route.private ? (
-            <PrivateRoute key={route.label} {...route} />
-          ) : (
-            <PublicRoute
-              key={route.label}
-              {...route}
-              restricted={route.restricted}
-            />
-          );
-        })}
-        <Redirect to="/auth" />
-      </Switch>
-    </Suspense>
-  );
-};
-
-export default App;
 ```
 
 ## store.js
