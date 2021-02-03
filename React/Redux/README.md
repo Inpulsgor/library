@@ -69,5 +69,26 @@ export const store = configureStore({
 export const persistor = persistStore(store);
 ```
 
+## actions.js
+```js
+/*
+* ____________REDUX ACTIONS_________________________________________________
+*/
 
+/*
+* ____________TOOLKIT ACTIONS_________________________________________________
+*/
+```
+
+## reducers.js
+```js
+/*
+* ____________REDUX REDUCERS_________________________________________________
+*/
+
+/*
+* ____________TOOLKIT REDUCERS_________________________________________________
+*/
+
+```
 
