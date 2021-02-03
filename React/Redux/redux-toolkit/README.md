@@ -59,16 +59,12 @@ export const persistor = persistStore(store);
 ## Actions.js
 ```js
 import { createAction } from "@reduxjs/toolkit";
-import authTypes from "./authTypes";
 
-/*
- * SIGN IN
- */
+// SIGN IN
 
-export const signInRequest = createAction(authTypes.SIGN_IN_REQUEST);
-
+export const signInRequest = createAction("auth/SIGN_IN_REQUEST");
 export const signInSuccess = createAction(
-  authTypes.SIGN_IN_SUCCESS,
+  "auth/SIGN_IN_SUCCESS",
   (response) => ({
     payload: {
       response,
@@ -76,16 +72,13 @@ export const signInSuccess = createAction(
   })
 );
 
-export const signInError = createAction(authTypes.SIGN_IN_ERROR);
+export const signInError = createAction("auth/SIGN_IN_ERROR");
 
-/*
- * SIGN UP
- */
+// SIGN UP
 
-export const signUpRequest = createAction(authTypes.SIGN_UP_REQUEST);
-
+export const signUpRequest = createAction("auth/SIGN_UP_REQUEST");
 export const signUpSuccess = createAction(
-  authTypes.SIGN_UP_SUCCESS,
+  "auth/SIGN_UP_SUCCESS",
   (response) => ({
     payload: {
       response,
@@ -93,20 +86,16 @@ export const signUpSuccess = createAction(
   })
 );
 
-export const signUpError = createAction(authTypes.SIGN_UP_ERROR);
+export const signUpError = createAction("auth/SIGN_UP_ERROR");
 
-/*
- * SIGN OUT
- */
+// SIGN OUT
 
-export const signOutSuccess = createAction(authTypes.SIGN_OUT_SUCCESS);
-export const signOutError = createAction(authTypes.SIGN_OUT_ERROR);
+export const signOutSuccess = createAction("auth/SIGN_OUT_SUCCESS");
+export const signOutError = createAction("auth/SIGN_OUT_ERROR");
 
-/*
- * CLEAR ERROR
- */
+// CLEAR ERROR
 
-export const clearError = createAction(authTypes.CLEAR_ERROR);
+export const clearError = createAction("auth/CLEAR_ERROR");
 ```
 
 ## Reducer.js
