@@ -7,7 +7,7 @@
 ## HTML/CSS
  - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md)
  - [scss config](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS)
- - [!important](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
+ - [important](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
 ###
  - [Components](https://github.com/Inpulsgor/library/tree/master/Markup/Components)
  
