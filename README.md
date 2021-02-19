@@ -1,4 +1,4 @@
-## Configs
+## Config
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (config file)
  - [.env.local](https://github.com/Inpulsgor/library/tree/master/React/env) (`secure place for API keys`)
  - [.jsconfig](https://github.com/Inpulsgor/library/tree/master/React/jsconfig) ( all imports will start from `src`)
