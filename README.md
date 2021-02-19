@@ -46,6 +46,3 @@
  - [basics](https://github.com/Inpulsgor/library/tree/master/Vue/basics) (basics)
  ###
  - [Components]()
- 
-## Server
- - [http status](https://github.com/Inpulsgor/library/tree/master/HTTP) (http request status)
