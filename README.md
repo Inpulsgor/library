@@ -1,6 +1,6 @@
 ## Config
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/Config/prettierrc)
- - [.env.local](https://github.com/Inpulsgor/library/tree/master/Config/env) (`secure place for API keys`)
+ - [.env.local](https://github.com/Inpulsgor/library/tree/master/Config/env) (`API keys` secure storage)
  - [jsconfig.json](https://github.com/Inpulsgor/library/tree/master/Config/jsconfig) ( all imports will start from `src`)
  
 ## Git
