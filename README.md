@@ -5,11 +5,11 @@
  - [git cheatsheet](https://github.com/Inpulsgor/library/tree/master/git)
 
 ## HTML/CSS
- - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md) (font-weight list) 
- - [scss](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS) (styles config) 
- - [console.log](https://github.com/Inpulsgor/library/tree/master/Markup/console) (console.log(`colorized text`))
+ - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md)
+ - [scss config](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS)
+ - [!important](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
 ###
- - [helpers](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
+ - [Components](https://github.com/Inpulsgor/library/tree/master/Markup/Components)
  
 ## JavaScript
  - [formSubmit](https://github.com/Inpulsgor/library/tree/master/JavaScript/jsForm) (form submit) 
