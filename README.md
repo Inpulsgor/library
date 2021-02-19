@@ -1,6 +1,8 @@
 ```shell
 (Configs & Tools) library
 ```
+## Git
+ - [git cheatsheet](https://github.com/Inpulsgor/library/tree/master/git)
 
 ## HTML/CSS
  - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md) (font-weight list) 
@@ -46,6 +48,3 @@
  
 ## Server
  - [http status](https://github.com/Inpulsgor/library/tree/master/HTTP) (http request status)
-
-## Git
- - [git cheatsheet](https://github.com/Inpulsgor/library/tree/master/git)
