@@ -1,6 +1,8 @@
-```shell
-(Configs & Tools) library
-```
+## Configs
+ - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (config file)
+ - [.env.local](https://github.com/Inpulsgor/library/tree/master/React/env) (`secure place for API keys`)
+ - [.jsconfig](https://github.com/Inpulsgor/library/tree/master/React/jsconfig) ( all imports will start from `src`)
+ 
 ## Git
  - [git cheatsheet](https://github.com/Inpulsgor/library/tree/master/git)
 
@@ -23,7 +25,6 @@
  - [Components](https://github.com/Inpulsgor/library/tree/master/JavaScript/Components)
  
 ## React
- - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/React/prettier) (config file) 
  - [setState & deleteByID](https://github.com/Inpulsgor/library/tree/master/React/setState) 
  - [propTypes & DefaultProps](https://github.com/Inpulsgor/library/tree/master/React/propTypes)
  - [autoScroll](https://github.com/Inpulsgor/library/tree/master/React/autoScroll) (chat messages auto scroll)
@@ -34,9 +35,7 @@
  - [token](https://github.com/Inpulsgor/library/tree/master/React/token) (Json Web Token - `set(token)` & `unset()`) 
  - [routes](https://github.com/Inpulsgor/library/tree/master/React/routes) (Private/Public routes) 
  - [redux](https://github.com/Inpulsgor/library/tree/master/React/Redux) (`Redux`)
- - [.env.local](https://github.com/Inpulsgor/library/tree/master/React/env) (`secure place for API keys`)
- - [axios](https://github.com/Inpulsgor/library/tree/master/React/axios) 
- - [jsconfig](https://github.com/Inpulsgor/library/tree/master/React/jsconfig) ( all imports will start from `src`)
+ - [axios](https://github.com/Inpulsgor/library/tree/master/React/axios)
  - [routeTransition](https://github.com/Inpulsgor/library/tree/master/React/routeTransition) 
  - [helpers](https://github.com/Inpulsgor/library/tree/master/React/helpers) (`helpers.js`)
  ###
