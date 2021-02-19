@@ -1,4 +1,4 @@
-## console.log( colorized text );
+## colorized console.log();
 ```js
 console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
 ```
