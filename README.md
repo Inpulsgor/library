@@ -5,9 +5,10 @@
  - [git cheatsheet](https://github.com/Inpulsgor/library/tree/master/git)
 
 ## HTML/CSS
- - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md)
- - [scss config](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS)
  - [important](https://github.com/Inpulsgor/library/tree/master/Markup/helpers)
+ - [scss config](https://github.com/Inpulsgor/library/tree/master/Markup/SCSS)
+ - [font-weight](https://github.com/Inpulsgor/library/blob/master/Markup/font-weight/README.md)
+ - [http status codes](https://github.com/Inpulsgor/library/tree/master/Markup/http)
 ###
  - [Components](https://github.com/Inpulsgor/library/tree/master/Markup/Components)
  
