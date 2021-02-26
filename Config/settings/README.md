@@ -1,0 +1,58 @@
+## vscode ```settings.json```
+
+```json
+{
+    "remote.SSH.remotePlatform": {
+      "develop": "linux"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.tabSizing": "shrink",
+    "atomKeymap.promptV3Features": true,
+    // Editor config
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.wordWrap": "on",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    },
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "files.insertFinalNewline": true,
+    // Git config
+    "git.ignoreLegacyWarning": true,
+    "gitlens.advanced.messages": {
+      "suppressGitVersionWarning": true
+    },
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.options.useTabs": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "path-intellisense.extensionOnImport": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "window.zoomLevel": 0,
+    "gitlens.gitCommands.closeOnFocusOut": true,
+    "workbench.colorTheme": "Andromeda Italic",
+    "editor.fontFamily": "FiraCode, Consolas, 'Courier New', monospace",
+  }
+```
