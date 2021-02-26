@@ -2,6 +2,7 @@
  - [.prettierrc](https://github.com/Inpulsgor/library/tree/master/Config/prettierrc)
  - [.env.local](https://github.com/Inpulsgor/library/tree/master/Config/env) (`API keys` secure storage)
  - [jsconfig.json](https://github.com/Inpulsgor/library/tree/master/Config/jsconfig) ( all imports will start from `src`)
+ - [settings.json](https://github.com/Inpulsgor/library/tree/master/Config/settings) (vscode `settings.json`)
  
 ## Git
  - [git cheatsheet](https://github.com/Inpulsgor/library/tree/master/git)
