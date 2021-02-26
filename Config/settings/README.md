@@ -56,3 +56,43 @@
     "editor.fontFamily": "FiraCode, Consolas, 'Courier New', monospace",
   }
 ```
+## MacOs - vscode config
+```json
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 0,
+    "liveSassCompile.settings.formats": [
+        {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "./css"
+        }
+],
+"editor.wordWrap": "on",
+"vsicons.dontShowNewVersionMessage": true,
+"workbench.statusBar.feedback.visible": false,
+"liveServer.settings.donotShowInfoMsg": true,
+"editor.tabSize": 2,
+"files.autoSave": "onFocusChange",
+"editor.formatOnPaste": false,
+"editor.formatOnSave": false,
+"editor.formatOnType": false,
+"[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"explorer.confirmDelete": false,
+"editor.suggestSelection": "first",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"breadcrumbs.enabled": true,
+"terminal.integrated.shell.osx": "/bin/zsh",
+"editor.fontWeight": "500",
+// "terminal.integrated.fontFamily": "Fira Code",
+"editor.fontFamily": "'Fira Code'",
+"editor.fontLigatures": true,
+"terminal.integrated.fontSize": 14,
+"editor.fontSize": 13,
+"workbench.colorTheme": "Community Material Theme Darker High Contrast",
+"explorer.confirmDragAndDrop": false
+}
+```
