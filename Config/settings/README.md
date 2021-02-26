@@ -2,34 +2,45 @@
 
 ```json
 {
-    "remote.SSH.remotePlatform": {
-      "develop": "linux"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.editor.tabSizing": "shrink",
-    "atomKeymap.promptV3Features": true,
-    // Editor config
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
+  // Editor config
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
     "editor.wordWrap": "on",
+    "editor.suggestSelection": "first",
+  "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+  "editor.renderWhitespace": "all",
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
       "source.fixAll.stylelint": true
     },
-    "editor.renderWhitespace": "all",
-    "editor.insertSpaces": false,
-    "editor.detectIndentation": false,
-    "files.insertFinalNewline": true,
+  "files.insertFinalNewline": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+  "workbench.editor.tabSizing": "shrink",
+    "diffEditor.wordWrap": "on",
+    "window.zoomLevel": 0,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "atomKeymap.promptV3Features": true,
+    "path-intellisense.extensionOnImport": true,
+
     // Git config
-    "git.ignoreLegacyWarning": true,
-    "gitlens.advanced.messages": {
-      "suppressGitVersionWarning": true
-    },
+  "git.ignoreLegacyWarning": true,
     "git.confirmSync": false,
     "git.autofetch": true,
     "git.enableSmartCommit": true,
+  "gitlens.gitCommands.closeOnFocusOut": true,
+    "gitlens.advanced.messages": {
+    "suppressGitVersionWarning": true
+    },
     "vetur.format.options.tabSize": 4,
     "vetur.format.options.useTabs": true,
+  
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -48,12 +59,9 @@
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "path-intellisense.extensionOnImport": true,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "window.zoomLevel": 0,
-    "gitlens.gitCommands.closeOnFocusOut": true,
-    "workbench.colorTheme": "Andromeda Italic",
-    "editor.fontFamily": "FiraCode, Consolas, 'Courier New', monospace",
+  "remote.SSH.remotePlatform": {
+        "development": "linux"
+    },
   }
 ```
 ## MacOs - vscode config
