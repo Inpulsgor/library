@@ -1,31 +1,36 @@
 ## vscode ```settings.json```
 
 ```json
+
 {
 	// Editor config
 
 	"editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+	"editor.fontSize": 13,
 	"editor.fontWeight": 400,
 	"editor.fontLigatures": true,
-	//   "editor.formatOnSave": true,
-	//   "editor.formatOnType": true,
-	//   "editor.formatOnPaste": true,
+	"editor.wordWrap": "on",
 	"editor.minimap.enabled": false,
 	"editor.suggestSelection": "first",
-	"editor.wordWrap": "on",
-	//   "editor.multiCursorModifier": "ctrlCmd",
-	//   "editor.renderWhitespace": "all",
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true,
 		"source.fixAll.stylelint": true
 	},
+	//   "editor.formatOnSave": true,
+	//   "editor.formatOnType": true,
+	//   "editor.formatOnPaste": true,
+	//   "editor.multiCursorModifier": "ctrlCmd",
+	//   "editor.renderWhitespace": "all",
 	"files.insertFinalNewline": true,
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Community Material Theme Darker High Contrast",
 	"workbench.editor.tabSizing": "shrink",
 	"diffEditor.wordWrap": "on",
+	"terminal.integrated.fontFamily": "Consolas",
+	"terminal.integrated.fontSize": 14,
+	// "terminal.integrated.fontWeight": 500,
+	// "terminal.integrated.lineHeight": 1.05,
 	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"atomKeymap.promptV3Features": true,
@@ -58,14 +63,14 @@
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
 	},
-	"remote.SSH.configFile": "C:/Users/Smakovskyi/.ssh/config",
+	// "remote.SSH.configFile": "C:/Users/Smakovskyi/.ssh/config",
 	"remote.SSH.remotePlatform": {
 		"development": "linux",
-		"dev-epicentr": "linux"
+		"dev-epicentr": "linux",
+		"eportal": "linux"
 	},
 
-	// my prev settings
-
+	// prev settings
 	"stylelint.enable": true,
 	//   "css.validate": false,
 	//   "scss.validate": false,
@@ -74,65 +79,13 @@
 	"sync.gist": "1a986432d68d972189280a24ce084239",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"explorer.confirmDelete": false,
-	"editor.fontSize": 12,
 	"gitlens.partners": {},
 	"prettier.useTabs": true,
-	"vetur.format.options.useTabs": true
+	"vetur.format.options.useTabs": true,
+	"material-icon-theme.folders.color": "#42a5f5",
+	"tabnine.experimentalAutoImports": true,
+	"workbench.colorTheme": "Community Material Theme Darker High Contrast"
 }
-
-/* {
-  "atomKeymap.promptV3Features": true,
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  "editor.wordWrap": "on",
-  "editor.insertSpaces": false,
-  "editor.stickyTabStops": true,
-  "workbench.editor.wrapTabs": true,
-  "editor.renderWhitespace": "all",
-  "editor.suggestSelection": "first",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
-  "material-icon-theme.folders.color": "#42a5f5",
-  "material-icon-theme.activeIconPack": "vue_vuex",
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "puglint.enable": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "remote.SSH.configFile": "C:/config/ssh",
-  // "remote.SSH.configFile": "/Users/front/Documents/config",
-  "remote.SSH.remotePlatform": {
-    "dev-epicentr": "linux",
-    "dev": "linux"
-  },
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "tabnine.experimentalAutoImports": true,
-  "prettier.useTabs": true,
-  "vetur.format.options.useTabs": true,
-  "window.zoomLevel": -1
-}
- */
 
 ```
 ## MacOs - vscode config
