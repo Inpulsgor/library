@@ -276,6 +276,21 @@ input[type='radio'].visually-hidden {
   height: 100vh;
 }
 
+// ===== responsive font =====
+@mixin responsive-font($pcSize, $mobSize) {
+  $maxWidth: 1440; //контейнер
+  $addSize: $pcSize - $mobSize; //разница в размере
+  $maxWidth: $maxWidth - 320; //разница в контейнерах
+  font-size: $pcSize + px; //размер на десктопе
+  @media (max-width: 1440px) {
+    //мобильный шрифт - 16px
+    //десктопный шрифт - 32px
+    //контейнер - 1200px
+    //calc(минимальный размер шрифта + разница с максимальным * (100vw            / размер контейнера))
+    //font-size: calc(16px           +           16           * ((100vw - 320px)  /     (1200)));
+    font-size: calc(#{$mobSize + px} +      #{$addSize}       * ((100vw - 320px)  / #{$maxWidth}));
+  }
+}
 ```
 
 ## brakepoints.scss
